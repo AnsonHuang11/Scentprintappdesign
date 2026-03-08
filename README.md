@@ -1,1 +1,11 @@
-# repo-template
+
+  # Scent Print app design
+
+  This is a code bundle for Scent Print app design. The original project is available at https://www.figma.com/design/XKoAxskMXUBtHqNskFS2Mx/Scent-Print-app-design.
+
+  ## Running the code
+
+  Run `npm i` to install the dependencies.
+
+  Run `npm run dev` to start the development server.
+  

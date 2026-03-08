@@ -1,0 +1,335 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+
+  /* Scent Print Light Mode */
+  --sp-bg: #F4F2EF;
+  --sp-surface: #EDEAE6;
+  --sp-surface-2: #E5E1DC;
+  --sp-border: rgba(120, 100, 80, 0.12);
+  --sp-accent: #A86828;
+  --sp-accent-muted: rgba(168, 104, 40, 0.15);
+  --sp-text: #2C2520;
+  --sp-text-muted: #7A6E66;
+  --sp-text-faint: #A89E96;
+  --sp-overlay: rgba(244, 242, 239, 0.85);
+
+  --background: #F4F2EF;
+  --foreground: #2C2520;
+  --card: #EDEAE6;
+  --card-foreground: #2C2520;
+  --popover: #EDEAE6;
+  --popover-foreground: #2C2520;
+  --primary: #A86828;
+  --primary-foreground: #F4F2EF;
+  --secondary: #E5E1DC;
+  --secondary-foreground: #2C2520;
+  --muted: #E5E1DC;
+  --muted-foreground: #7A6E66;
+  --accent: rgba(168, 104, 40, 0.12);
+  --accent-foreground: #A86828;
+  --destructive: #c0392b;
+  --destructive-foreground: #F4F2EF;
+  --border: rgba(120, 100, 80, 0.12);
+  --input: transparent;
+  --input-background: #E5E1DC;
+  --switch-background: #C5BDB5;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: rgba(168, 104, 40, 0.4);
+  --radius: 1rem;
+  --sidebar: #EDEAE6;
+  --sidebar-foreground: #2C2520;
+  --sidebar-primary: #A86828;
+  --sidebar-primary-foreground: #F4F2EF;
+  --sidebar-accent: #E5E1DC;
+  --sidebar-accent-foreground: #2C2520;
+  --sidebar-border: rgba(120, 100, 80, 0.12);
+  --sidebar-ring: rgba(168, 104, 40, 0.4);
+}
+
+.dark {
+  /* Scent Print Dark Mode */
+  --sp-bg: #0E0F12;
+  --sp-surface: #1A1B1F;
+  --sp-surface-2: #222429;
+  --sp-border: rgba(200, 170, 130, 0.10);
+  --sp-accent: #C17A3A;
+  --sp-accent-muted: rgba(193, 122, 58, 0.18);
+  --sp-text: #E8E0D5;
+  --sp-text-muted: #8C7E70;
+  --sp-text-faint: #5A5048;
+  --sp-overlay: rgba(14, 15, 18, 0.88);
+
+  --background: #0E0F12;
+  --foreground: #E8E0D5;
+  --card: #1A1B1F;
+  --card-foreground: #E8E0D5;
+  --popover: #1A1B1F;
+  --popover-foreground: #E8E0D5;
+  --primary: #C17A3A;
+  --primary-foreground: #0E0F12;
+  --secondary: #222429;
+  --secondary-foreground: #E8E0D5;
+  --muted: #222429;
+  --muted-foreground: #8C7E70;
+  --accent: rgba(193, 122, 58, 0.15);
+  --accent-foreground: #C17A3A;
+  --destructive: #e74c3c;
+  --destructive-foreground: #E8E0D5;
+  --border: rgba(200, 170, 130, 0.10);
+  --input: transparent;
+  --input-background: #222429;
+  --switch-background: #3A3830;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: rgba(193, 122, 58, 0.4);
+  --sidebar: #1A1B1F;
+  --sidebar-foreground: #E8E0D5;
+  --sidebar-primary: #C17A3A;
+  --sidebar-primary-foreground: #0E0F12;
+  --sidebar-accent: #222429;
+  --sidebar-accent-foreground: #E8E0D5;
+  --sidebar-border: rgba(200, 170, 130, 0.10);
+  --sidebar-ring: rgba(193, 122, 58, 0.4);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1, h2, h3 {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  input, textarea {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  canvas {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Scent Print custom animations */
+@keyframes sp-breathe {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+
+@keyframes sp-halo-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.4); opacity: 0.2; }
+}
+
+@keyframes sp-halo-ring {
+  0% { transform: scale(0.8); opacity: 0.8; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+@keyframes sp-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes sp-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sp-slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sp-encode-ring {
+  from { stroke-dashoffset: 283; }
+  to { stroke-dashoffset: 0; }
+}
+
+/* Leaflet map overrides */
+.sp-map .leaflet-container {
+  background: var(--sp-bg) !important;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.sp-map .leaflet-control-zoom {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.sp-map .leaflet-control-zoom a {
+  background: var(--sp-surface) !important;
+  color: var(--sp-text) !important;
+  border: 1px solid var(--sp-border) !important;
+  width: 32px !important;
+  height: 32px !important;
+  line-height: 30px !important;
+  font-size: 16px !important;
+  border-radius: 8px !important;
+  margin-bottom: 4px !important;
+}
+
+.sp-map .leaflet-control-zoom a:hover {
+  background: var(--sp-surface-2) !important;
+}
+
+.sp-map .leaflet-attribution-flag { display: none !important; }
+.sp-map .leaflet-control-attribution {
+  background: transparent !important;
+  color: var(--sp-text-faint) !important;
+  font-size: 9px !important;
+}
+
+/* Scent halo marker */
+.scent-halo-marker {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-left: -32px;
+  margin-top: -32px;
+  cursor: pointer;
+}
+
+.scent-halo-core {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(193,122,58,0.95) 0%, rgba(168,104,40,0.7) 60%, transparent 100%);
+  box-shadow: 0 0 8px 2px rgba(193,122,58,0.4);
+}
+
+.scent-halo-ring-1 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(193,122,58,0.2) 0%, rgba(193,122,58,0.08) 50%, transparent 100%);
+  animation: sp-halo-pulse 3.5s ease-in-out infinite;
+}
+
+.scent-halo-ring-2 {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid rgba(193,122,58,0.2);
+  animation: sp-halo-ring 3.5s ease-out infinite;
+}
+
+.scent-halo-ring-3 {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid rgba(193,122,58,0.12);
+  animation: sp-halo-ring 3.5s ease-out infinite 1.75s;
+}
+
+/* Dark mode halo adjustments */
+.dark .scent-halo-core {
+  background: radial-gradient(circle, rgba(220,160,90,0.98) 0%, rgba(193,122,58,0.8) 60%, transparent 100%);
+  box-shadow: 0 0 10px 3px rgba(193,122,58,0.5);
+}
+
+.dark .scent-halo-ring-1 {
+  background: radial-gradient(circle, rgba(193,122,58,0.25) 0%, rgba(193,122,58,0.10) 50%, transparent 100%);
+}
+
+.dark .scent-halo-ring-2 {
+  border-color: rgba(193,122,58,0.3);
+}
+
+.dark .scent-halo-ring-3 {
+  border-color: rgba(193,122,58,0.18);
+}
